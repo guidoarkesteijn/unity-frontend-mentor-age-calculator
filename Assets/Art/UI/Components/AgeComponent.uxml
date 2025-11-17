@@ -1,0 +1,39 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="AgeInputField" src="project://database/Assets/Art/UI/Components/AgeInputField.uxml?fileID=9197481963319205126&amp;guid=678c9e361e488414d949579e791ef8be&amp;type=3#AgeInputField"/>
+    <Style src="project://database/Assets/Art/UI/Stylesheets/Stylesheet.uss?fileID=7433441132597879392&amp;guid=7f475a75239e7e34b98ddc1147d041c3&amp;type=3#Stylesheet"/>
+    <ui:VisualElement style="flex-direction: row; width: 75%;">
+        <ui:Instance template="AgeInputField" name="dayInputField" style="width: 33%;"/>
+        <ui:Instance template="AgeInputField" name="monthInputField" style="width: 33%;"/>
+        <ui:Instance template="AgeInputField" name="yearInputField" style="width: 33%;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="ButtonPosition" style="flex-direction: row; align-items: center; justify-content: flex-end;">
+        <ui:VisualElement class="line" style="flex-grow: 1; left: 0; right: 0; position: absolute; margin-right: 4px;"/>
+        <ui:Button name="ButtonSubmit" class="button" style="width: 12.5%;"/>
+    </ui:VisualElement>
+    <ui:VisualElement data-source-type="AgeData, Assembly-CSharp" name="StatsContainer" class="number-text-title" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label text="--" name="LabelYears" class="number-text">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Years" binding-mode="ToTarget" source-to-ui-converters="IntConverters"/>
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="years" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Poppins-ExtraBoldItalic%20SDF.asset?fileID=11400000&amp;guid=79042992067af75409958fd2b9884041&amp;type=2#Poppins-ExtraBoldItalic SDF&quot;);"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label text="--" name="LabelMonths" class="number-text">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Months" binding-mode="ToTarget" source-to-ui-converters="IntConverters"/>
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="months" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Poppins-ExtraBoldItalic%20SDF.asset?fileID=11400000&amp;guid=79042992067af75409958fd2b9884041&amp;type=2#Poppins-ExtraBoldItalic SDF&quot;);"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label text="--" name="LabelDays" class="number-text">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Days" binding-mode="ToTarget" source-to-ui-converters="IntConverters"/>
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="days" style="-unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/Poppins-ExtraBoldItalic%20SDF.asset?fileID=11400000&amp;guid=79042992067af75409958fd2b9884041&amp;type=2#Poppins-ExtraBoldItalic SDF&quot;);"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

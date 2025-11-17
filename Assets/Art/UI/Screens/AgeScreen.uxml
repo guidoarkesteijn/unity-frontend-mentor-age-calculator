@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="AgeComponent" src="project://database/Assets/Art/UI/Components/AgeComponent.uxml?fileID=9197481963319205126&amp;guid=800e6368716528e4d99ce68cda1dd9c7&amp;type=3#AgeComponent"/>
+    <ui:VisualElement style="margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:Instance template="AgeComponent" name="view" style="width: 50%; height: 75%; margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; background-color: rgb(255, 255, 255); border-bottom-right-radius: 50px;"/>
+    </ui:VisualElement>
+</ui:UXML>

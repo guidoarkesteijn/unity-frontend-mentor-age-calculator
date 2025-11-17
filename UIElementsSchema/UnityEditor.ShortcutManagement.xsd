@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="UnityEditor.ShortcutManagement" elementFormDefault="qualified" targetNamespace="UnityEditor.ShortcutManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+  <xs:complexType name="ShortcutSearchFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="UnityEngine.UIElements" base="q1:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q1:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="placeholder-text" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShortcutSearchField" xmlns:q2="UnityEngine.UIElements" substitutionGroup="q2:VisualElement" type="tns:ShortcutSearchFieldType" />
+  <xs:complexType name="ShortcutPopupSearchFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ShortcutSearchFieldType">
+        <xs:sequence>
+          <xs:element xmlns:q3="UnityEngine.UIElements" ref="q3:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShortcutPopupSearchField" substitutionGroup="tns:ShortcutSearchField" type="tns:ShortcutPopupSearchFieldType" />
+</xs:schema>

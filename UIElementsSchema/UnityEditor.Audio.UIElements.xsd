@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="UnityEditor.Audio.UIElements" elementFormDefault="qualified" targetNamespace="UnityEditor.Audio.UIElements" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+  <xs:import schemaLocation="UnityEditor.UIElements.xsd" namespace="UnityEditor.UIElements" />
+  <xs:complexType name="AudioLevelMeterType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="UnityEngine.UIElements" base="q1:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q1:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AudioLevelMeter" xmlns:q2="UnityEngine.UIElements" substitutionGroup="q2:VisualElement" type="tns:AudioLevelMeterType" />
+  <xs:complexType name="AudioContainerElementClipFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="UnityEditor.UIElements" base="q3:ObjectFieldType">
+        <xs:sequence>
+          <xs:element xmlns:q4="UnityEngine.UIElements" ref="q4:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AudioContainerElementClipField" xmlns:q5="UnityEditor.UIElements" substitutionGroup="q5:ObjectField" type="tns:AudioContainerElementClipFieldType" />
+  <xs:complexType name="AudioRandomRangeSliderTrackerType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="UnityEngine.UIElements" base="q6:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q6:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AudioRandomRangeSliderTracker" xmlns:q7="UnityEngine.UIElements" substitutionGroup="q7:VisualElement" type="tns:AudioRandomRangeSliderTrackerType" />
+  <xs:complexType name="TickmarksType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="UnityEngine.UIElements" base="q8:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q8:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Tickmarks" xmlns:q9="UnityEngine.UIElements" substitutionGroup="q9:VisualElement" type="tns:TickmarksType" />
+</xs:schema>

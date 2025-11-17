@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="UnityEditor.U2D.Animation" elementFormDefault="qualified" targetNamespace="UnityEditor.U2D.Animation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+  <xs:complexType name="PoseToolbarType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ToolbarType">
+        <xs:sequence>
+          <xs:element xmlns:q1="UnityEngine.UIElements" ref="q1:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ToolbarType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="UnityEngine.UIElements" base="q2:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q2:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Toolbar" xmlns:q3="UnityEngine.UIElements" substitutionGroup="q3:VisualElement" type="tns:ToolbarType" />
+  <xs:element name="PoseToolbar" substitutionGroup="tns:Toolbar" type="tns:PoseToolbarType" />
+  <xs:complexType name="VisibilityToolWindowType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="UnityEngine.UIElements" base="q4:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q4:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisibilityToolWindow" xmlns:q5="UnityEngine.UIElements" substitutionGroup="q5:VisualElement" type="tns:VisibilityToolWindowType" />
+  <xs:complexType name="BoneInspectorPanelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="UnityEngine.UIElements" base="q6:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q6:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BoneInspectorPanel" xmlns:q7="UnityEngine.UIElements" substitutionGroup="q7:VisualElement" type="tns:BoneInspectorPanelType" />
+  <xs:complexType name="PastePanelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="UnityEngine.UIElements" base="q8:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q8:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PastePanel" xmlns:q9="UnityEngine.UIElements" substitutionGroup="q9:VisualElement" type="tns:PastePanelType" />
+  <xs:complexType name="WeightToolbarType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ToolbarType">
+        <xs:sequence>
+          <xs:element xmlns:q10="UnityEngine.UIElements" ref="q10:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WeightToolbar" substitutionGroup="tns:Toolbar" type="tns:WeightToolbarType" />
+  <xs:complexType name="RigToolbarType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ToolbarType">
+        <xs:sequence>
+          <xs:element xmlns:q11="UnityEngine.UIElements" ref="q11:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RigToolbar" substitutionGroup="tns:Toolbar" type="tns:RigToolbarType" />
+  <xs:complexType name="BoneReparentToolWindowType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="UnityEngine.UIElements" base="q12:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q12:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BoneReparentToolWindow" xmlns:q13="UnityEngine.UIElements" substitutionGroup="q13:VisualElement" type="tns:BoneReparentToolWindowType" />
+  <xs:complexType name="WeightPainterPanelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="UnityEngine.UIElements" base="q14:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q14:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WeightPainterPanel" xmlns:q15="UnityEngine.UIElements" substitutionGroup="q15:VisualElement" type="tns:WeightPainterPanelType" />
+  <xs:complexType name="PivotInspectorPanelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="UnityEngine.UIElements" base="q16:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q16:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PivotInspectorPanel" xmlns:q17="UnityEngine.UIElements" substitutionGroup="q17:VisualElement" type="tns:PivotInspectorPanelType" />
+  <xs:complexType name="WeightInspectorIMGUIPanelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="UnityEngine.UIElements" base="q18:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q18:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WeightInspectorIMGUIPanel" xmlns:q19="UnityEngine.UIElements" substitutionGroup="q19:VisualElement" type="tns:WeightInspectorIMGUIPanelType" />
+  <xs:complexType name="GenerateWeightsPanelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="UnityEngine.UIElements" base="q20:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q20:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GenerateWeightsPanel" xmlns:q21="UnityEngine.UIElements" substitutionGroup="q21:VisualElement" type="tns:GenerateWeightsPanelType" />
+  <xs:complexType name="MeshToolbarType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ToolbarType">
+        <xs:sequence>
+          <xs:element xmlns:q22="UnityEngine.UIElements" ref="q22:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MeshToolbar" substitutionGroup="tns:Toolbar" type="tns:MeshToolbarType" />
+  <xs:complexType name="BoneReparentToolViewType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="UnityEngine.UIElements" base="q23:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q23:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BoneReparentToolView" xmlns:q24="UnityEngine.UIElements" substitutionGroup="q24:VisualElement" type="tns:BoneReparentToolViewType" />
+  <xs:complexType name="GenerateGeometryPanelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="UnityEngine.UIElements" base="q25:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q25:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GenerateGeometryPanel" xmlns:q26="UnityEngine.UIElements" substitutionGroup="q26:VisualElement" type="tns:GenerateGeometryPanelType" />
+  <xs:complexType name="InfluenceWindowType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="UnityEngine.UIElements" base="q27:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q27:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InfluenceWindow" xmlns:q28="UnityEngine.UIElements" substitutionGroup="q28:VisualElement" type="tns:InfluenceWindowType" />
+  <xs:complexType name="BoneToolbarType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ToolbarType">
+        <xs:sequence>
+          <xs:element xmlns:q29="UnityEngine.UIElements" ref="q29:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BoneToolbar" substitutionGroup="tns:Toolbar" type="tns:BoneToolbarType" />
+</xs:schema>

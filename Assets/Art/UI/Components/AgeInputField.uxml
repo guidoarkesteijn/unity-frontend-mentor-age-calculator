@@ -1,0 +1,22 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Art/UI/Stylesheets/Stylesheet.uss?fileID=7433441132597879392&amp;guid=7f475a75239e7e34b98ddc1147d041c3&amp;type=3#Stylesheet"/>
+    <ui:VisualElement data-source-type="InputFieldData, Assembly-CSharp" style="flex-grow: 1;">
+        <ui:Label text="Label" class="label-field">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="Title" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:TextField placeholder-text="XX" keyboard-type="NumberPad" class="text-field">
+            <Bindings>
+                <ui:DataBinding property="maxLength" data-source-path="MaxLength" binding-mode="ToTarget"/>
+                <ui:DataBinding property="placeholderText" data-source-path="Placeholder" binding-mode="ToTarget"/>
+                <ui:DataBinding property="value" data-source-path="Value" binding-mode="TwoWay"/>
+            </Bindings>
+        </ui:TextField>
+        <ui:Label class="label-field-error" style="font-size: 12px; white-space: normal;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="CurrentErrorMessage" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="UnityEditor.UIElements" elementFormDefault="qualified" targetNamespace="UnityEditor.UIElements" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+  <xs:complexType name="ToolbarButtonType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="UnityEngine.UIElements" base="q1:ButtonType">
+        <xs:sequence>
+          <xs:element ref="q1:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ToolbarButton" xmlns:q2="UnityEngine.UIElements" substitutionGroup="q2:Button" type="tns:ToolbarButtonType" />
+  <xs:complexType name="ToolbarSearchFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="UnityEngine.UIElements" base="q3:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q3:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="placeholder-text" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ToolbarSearchField" xmlns:q4="UnityEngine.UIElements" substitutionGroup="q4:VisualElement" type="tns:ToolbarSearchFieldType" />
+  <xs:complexType name="ToolbarPopupSearchFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ToolbarSearchFieldType">
+        <xs:sequence>
+          <xs:element xmlns:q5="UnityEngine.UIElements" ref="q5:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ToolbarPopupSearchField" substitutionGroup="tns:ToolbarSearchField" type="tns:ToolbarPopupSearchFieldType" />
+  <xs:complexType name="GradientFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="UnityEngine.UIElements" base="q6:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q6:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="Blend:{0,#FFFFFFFF};{1,#FFFFFFFF}+{0,1};{1,1}" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GradientField" xmlns:q7="UnityEngine.UIElements" substitutionGroup="q7:BindableElement" type="tns:GradientFieldType" />
+  <xs:complexType name="LayerFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="UnityEngine.UIElements" base="q8:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q8:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:int" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LayerField" xmlns:q9="UnityEngine.UIElements" substitutionGroup="q9:BindableElement" type="tns:LayerFieldType" />
+  <xs:complexType name="InspectorElementType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="UnityEngine.UIElements" base="q10:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q10:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InspectorElement" xmlns:q11="UnityEngine.UIElements" substitutionGroup="q11:BindableElement" type="tns:InspectorElementType" />
+  <xs:complexType name="FontDefinitionFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="UnityEngine.UIElements" base="q12:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q12:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FontDefinitionField" xmlns:q13="UnityEngine.UIElements" substitutionGroup="q13:BindableElement" type="tns:FontDefinitionFieldType" />
+  <xs:complexType name="CurveFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="UnityEngine.UIElements" base="q14:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q14:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="+(ClampForever,ClampForever)" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CurveField" xmlns:q15="UnityEngine.UIElements" substitutionGroup="q15:BindableElement" type="tns:CurveFieldType" />
+  <xs:complexType name="FontFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="UnityEngine.UIElements" base="q16:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q16:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FontField" xmlns:q17="UnityEngine.UIElements" substitutionGroup="q17:BindableElement" type="tns:FontFieldType" />
+  <xs:complexType name="RatioFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="UnityEngine.UIElements" base="q18:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q18:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RatioField" xmlns:q19="UnityEngine.UIElements" substitutionGroup="q19:BindableElement" type="tns:RatioFieldType" />
+  <xs:complexType name="ObjectFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="UnityEngine.UIElements" base="q20:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q20:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+        <xs:attribute default="true" name="allow-scene-objects" type="xs:boolean" />
+        <xs:attribute default="UnityEngine.Object, UnityEngine.CoreModule" name="type" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectField" xmlns:q21="UnityEngine.UIElements" substitutionGroup="q21:BindableElement" type="tns:ObjectFieldType" />
+  <xs:complexType name="RenderingLayerMaskFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="UnityEngine.UIElements" base="q22:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q22:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="4294967295" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RenderingLayerMaskField" xmlns:q23="UnityEngine.UIElements" substitutionGroup="q23:BindableElement" type="tns:RenderingLayerMaskFieldType" />
+  <xs:complexType name="UnityEventItemType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="UnityEngine.UIElements" base="q24:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q24:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnityEventItem" xmlns:q25="UnityEngine.UIElements" substitutionGroup="q25:VisualElement" type="tns:UnityEventItemType" />
+  <xs:complexType name="ObjectFieldWithPromptType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="UnityEngine.UIElements" base="q26:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q26:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+        <xs:attribute default="false" name="allow-scene-objects" type="xs:boolean" />
+        <xs:attribute name="type" type="xs:string" />
+        <xs:attribute name="title" type="xs:string" />
+        <xs:attribute name="message" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectFieldWithPrompt" xmlns:q27="UnityEngine.UIElements" substitutionGroup="q27:BindableElement" type="tns:ObjectFieldWithPromptType" />
+  <xs:complexType name="BackgroundFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="UnityEngine.UIElements" base="q28:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q28:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BackgroundField" xmlns:q29="UnityEngine.UIElements" substitutionGroup="q29:BindableElement" type="tns:BackgroundFieldType" />
+  <xs:complexType name="MaterialDefinitionFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="UnityEngine.UIElements" base="q30:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q30:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="none" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaterialDefinitionField" xmlns:q31="UnityEngine.UIElements" substitutionGroup="q31:BindableElement" type="tns:MaterialDefinitionFieldType" />
+  <xs:complexType name="ColorFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="UnityEngine.UIElements" base="q32:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q32:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="rgba(0, 0, 0, 0)" name="value" type="xs:string" />
+        <xs:attribute default="false" name="show-eye-dropper" type="xs:boolean" />
+        <xs:attribute default="true" name="show-alpha" type="xs:boolean" />
+        <xs:attribute default="false" name="hdr" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ColorField" xmlns:q33="UnityEngine.UIElements" substitutionGroup="q33:BindableElement" type="tns:ColorFieldType" />
+  <xs:complexType name="ToolbarBreadcrumbsType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="UnityEngine.UIElements" base="q34:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q34:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ToolbarBreadcrumbs" xmlns:q35="UnityEngine.UIElements" substitutionGroup="q35:VisualElement" type="tns:ToolbarBreadcrumbsType" />
+  <xs:complexType name="CursorFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="UnityEngine.UIElements" base="q36:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q36:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default=" 0 0" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CursorField" xmlns:q37="UnityEngine.UIElements" substitutionGroup="q37:BindableElement" type="tns:CursorFieldType" />
+  <xs:complexType name="PropertyFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="UnityEngine.UIElements" base="q38:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q38:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="binding-path" type="xs:string" />
+        <xs:attribute name="label" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PropertyField" xmlns:q39="UnityEngine.UIElements" substitutionGroup="q39:VisualElement" type="tns:PropertyFieldType" />
+  <xs:complexType name="MaskFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="UnityEngine.UIElements" base="q40:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q40:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:int" />
+        <xs:attribute name="choices" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaskField" xmlns:q41="UnityEngine.UIElements" substitutionGroup="q41:BindableElement" type="tns:MaskFieldType" />
+  <xs:complexType name="TagFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="UnityEngine.UIElements" base="q42:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q42:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TagField" xmlns:q43="UnityEngine.UIElements" substitutionGroup="q43:BindableElement" type="tns:TagFieldType" />
+  <xs:complexType name="ToolbarSpacerType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="UnityEngine.UIElements" base="q44:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q44:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ToolbarSpacer" xmlns:q45="UnityEngine.UIElements" substitutionGroup="q45:VisualElement" type="tns:ToolbarSpacerType" />
+  <xs:complexType name="LayerMaskFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaskFieldType">
+        <xs:sequence>
+          <xs:element xmlns:q46="UnityEngine.UIElements" ref="q46:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LayerMaskField" substitutionGroup="tns:MaskField" type="tns:LayerMaskFieldType" />
+  <xs:complexType name="DropdownOptionListItemType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="UnityEngine.UIElements" base="q47:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q47:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DropdownOptionListItem" xmlns:q48="UnityEngine.UIElements" substitutionGroup="q48:BindableElement" type="tns:DropdownOptionListItemType" />
+  <xs:complexType name="ToolbarMenuType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q49="UnityEngine.UIElements" base="q49:TextElementType">
+        <xs:sequence>
+          <xs:element ref="q49:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ToolbarMenu" xmlns:q50="UnityEngine.UIElements" substitutionGroup="q50:TextElement" type="tns:ToolbarMenuType" />
+  <xs:complexType name="TextShadowFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q51="UnityEngine.UIElements" base="q51:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q51:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0px 0px rgba(0, 0, 0, 0)" name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextShadowField" xmlns:q52="UnityEngine.UIElements" substitutionGroup="q52:BindableElement" type="tns:TextShadowFieldType" />
+  <xs:complexType name="Mask64FieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q53="UnityEngine.UIElements" base="q53:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q53:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute default="0" name="value" type="xs:unsignedLong" />
+        <xs:attribute name="choices" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Mask64Field" xmlns:q54="UnityEngine.UIElements" substitutionGroup="q54:BindableElement" type="tns:Mask64FieldType" />
+  <xs:complexType name="CategoryDropdownFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q55="UnityEngine.UIElements" base="q55:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q55:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CategoryDropdownField" xmlns:q56="UnityEngine.UIElements" substitutionGroup="q56:BindableElement" type="tns:CategoryDropdownFieldType" />
+  <xs:complexType name="ToolbarType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q57="UnityEngine.UIElements" base="q57:VisualElementType">
+        <xs:sequence>
+          <xs:element ref="q57:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Toolbar" xmlns:q58="UnityEngine.UIElements" substitutionGroup="q58:VisualElement" type="tns:ToolbarType" />
+  <xs:complexType name="ToolbarToggleType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q59="UnityEngine.UIElements" base="q59:ToggleType">
+        <xs:sequence>
+          <xs:element ref="q59:VisualElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ToolbarToggle" xmlns:q60="UnityEngine.UIElements" substitutionGroup="q60:Toggle" type="tns:ToolbarToggleType" />
+  <xs:complexType name="EnumFlagsFieldType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q61="UnityEngine.UIElements" base="q61:BindableElementType">
+        <xs:sequence>
+          <xs:element ref="q61:VisualElement" />
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" />
+        <xs:attribute name="value" type="xs:string" />
+        <xs:attribute name="type" type="xs:string" />
+        <xs:attribute default="false" name="include-obsolete-values" type="xs:boolean" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EnumFlagsField" xmlns:q62="UnityEngine.UIElements" substitutionGroup="q62:BindableElement" type="tns:EnumFlagsFieldType" />
+</xs:schema>
